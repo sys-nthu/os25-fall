@@ -1,10 +1,10 @@
 #!/bin/bash
 set -e
 
-SOURCE="/Users/yunchih/Documents/GitHub/teaching/os-course-book/_site"
+SOURCE="./production/_site"
 TARGET="./docs"
 
-# 1. Sync content
+bash -c "cd $SOURCE && quarto render"
 echo "Syncing from $SOURCE to $TARGET ..."
 rsync -av --delete "$SOURCE/" "$TARGET/"
 
