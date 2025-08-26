@@ -4,7 +4,7 @@ set -e
 SOURCE="./production/_site"
 TARGET="./docs"
 
-bash -c "cd $SOURCE && quarto render"
+bash -c "cd $SOURCE/.. && quarto render"
 echo "Syncing from $SOURCE to $TARGET ..."
 rsync -av --delete "$SOURCE/" "$TARGET/"
 
