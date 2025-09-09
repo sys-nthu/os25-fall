@@ -1,0 +1,99 @@
+# ------------------------------
+# Operating System @ NTHU CS
+# ------------------------------
+project:
+  type: website          # switched from "book"
+  output-dir: _site
+  resources:
+    - "*.png"
+    - "*.jpeg"
+    - "*.jfif"
+    - "*.svg"
+    - "*.txt*"
+
+filters:
+  - jiumi
+  - color
+
+website:
+  title: "Operating System (2025 Fall)"
+  back-to-top-navigation: true
+  favicon: "images/orange.png"
+  site-url: ""            # add when you deploy
+
+  sidebar:
+    collapse-level: 1
+    style: "docked"
+    search: true
+    contents:
+      - text: "OS 2025 Fall"
+        href: index.qmd
+      - section: "Week 1"
+        href: weeks/w1.qmd
+        contents:
+          - handouts/env_setup.qmd
+
+  navbar:
+    pinned: true
+    left:
+      - text: Home
+        file: index.qmd
+
+      - text: Handouts
+        menu:
+          - text: "Enviroment setup"
+            file: handouts/env_setup.qmd   
+
+      - text: Admin
+        menu:
+          - text: Policies
+            file: admin/policies.qmd   # placeholder
+          - text: Exploratory Projects
+            file: admin/explore.qmd   # placeholder
+          - text: SD1↓ (燒蛋一下)
+            file: admin/waitbutwhy.qmd   # placeholder
+
+    right:
+      # - icon: github
+      #   href: https://github.com/AtlasOfLivingAustralia/cleaning_data
+      - icon: globe
+        href: https://dcs.site.nthu.edu.tw/
+
+
+  # --- PAGE FOOTER ---
+  page-footer:
+    border: true
+    left: |
+      <img id="footer-cat-left" src="/images/cat-left.png" alt="Cat Left">
+    center: |
+      <span id="footer-center">Made with ❤️ by Tony, (CC BY 4.0) <br/><span style='font-size: 8px'>Cat source: Freepik and ChatGPT</span></span>
+    right: |
+      <img id="footer-cat-right" src="/images/cat-right.png" alt="Cat Right">
+
+      
+
+# NTHU CS <a href="https://dcs.site.nthu.edu.tw/">
+#   <img src="/images/nthucs-v2.png" style="height:30px;padding:0 10px 5px 10px;">
+# </a>
+format:
+  html:
+    mainfont: Montserrat
+    monofont: Fira Code
+    highlight-style: arrow
+    monobackgroundcolor: "#fdf1e5"
+    link-external-icon: true
+    link-external-newwindow: true
+    theme:
+      - cat.scss
+      - footer-cat.scss
+      # - theme.css
+      # - theme.scss
+      # - minty
+
+execute:
+  code-annotations: hover
+  number-depth: 3
+
+bibliography:
+  - references.bib
+  - os.bib

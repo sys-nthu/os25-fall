@@ -1,10 +1,43 @@
 #!/bin/bash
+# ==============================================================================
+#  Deploy Script for Quarto Course Website
+#
+#  This script syncs files from a manifest to a deployment directory,
+#  cleans up extraneous files, and then renders the Quarto site.
+# ==============================================================================
+
+# Exit immediately if a command exits with a non-zero status.
 set -e
 
-SOURCE="./production/_site"
+# --- Configuration ---
+DEPLOY_DIR="./deploy-stage"
+SRC_DIR="../book"
+FILE_LIST="published-files.txt"
+
+
+# 1. Verify that the file list exists before we start.
+if [ ! -f "$FILE_LIST" ]; then
+    echo "Error: The file list '$FILE_LIST' was not found."
+    exit 1
+fi
+
+# 2. Ensure the deployment directory exists.
+mkdir -p "$DEPLOY_DIR"
+
+# 3. Sync files using rsync.
+echo "Syncing published files to '$DEPLOY_DIR'..."
+rsync -av --delete --files-from="$FILE_LIST" "$SRC_DIR" "$DEPLOY_DIR"
+
+# 4. Render the Quarto site in the deployment directory.
+echo "Rendering the Quarto site..."
+cp ./_quarto.yml "$DEPLOY_DIR"
+cd "$DEPLOY_DIR"
+quarto render
+cd .. # Return to the project root directory
+
+SOURCE="$DEPLOY_DIR/_site"
 TARGET="./docs"
 
-bash -c "cd $SOURCE/.. && quarto render"
 echo "Syncing from $SOURCE to $TARGET ..."
 rsync -av --delete "$SOURCE/" "$TARGET/"
 
