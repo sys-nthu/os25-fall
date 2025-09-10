@@ -17,6 +17,7 @@
 ./_extensions/jiumi/jiumi.lua
 ./_extensions/color/_extension.yml
 ./_extensions/color/color.lua
+./labs/mini-cloud.qmd
 ./.gitignore
 ./staff.qmd
 ./syllabus.qmd
