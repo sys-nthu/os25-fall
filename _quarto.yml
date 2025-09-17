@@ -28,10 +28,23 @@ website:
     contents:
       - text: "OS 2025 Fall"
         href: index.qmd
-      - section: "Week 1"
-        href: weeks/w1.qmd
+      - section: "Worksheet 2"
+        href: weeks/w2.qmd
         contents:
           - handouts/env_setup.qmd
+      - section: "Worksheet 3"
+        href: weeks/w3.qmd
+        contents:
+          - handouts/unix.qmd
+          - labs/mini-cloud.qmd
+          - labs/process-creation.qmd
+      - section: "Worksheet 4"
+        href: weeks/w4.qmd
+        contents:
+          - handouts/privilege.qmd
+          - labs/path-traversal.qmd
+          - labs/process-address-space.qmd
+          - labs/linking.qmd
 
   navbar:
     pinned: true

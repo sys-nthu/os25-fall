@@ -1,9 +1,12 @@
 ./os.bib
 ./theme.css
-./weeks/w1.qmd
 ./weeks/w2.qmd
+./weeks/w3.qmd
+./weeks/w4.qmd
 ./handouts/images/
 ./handouts/env_setup.qmd
+./handouts/unix.qmd
+./handouts/privilege.qmd
 ./images/
 ./references.bib
 ./_fathom.html
@@ -18,6 +21,10 @@
 ./_extensions/color/_extension.yml
 ./_extensions/color/color.lua
 ./labs/mini-cloud.qmd
+./labs/linking.qmd
+./labs/process-creation.qmd
+./labs/process-address-space.qmd
+./labs/path-traversal.qmd
 ./.gitignore
 ./staff.qmd
 ./syllabus.qmd
