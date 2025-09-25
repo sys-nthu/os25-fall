@@ -45,6 +45,12 @@ website:
           - labs/path-traversal.qmd
           - labs/process-address-space.qmd
           - labs/linking.qmd
+      - section: "Worksheet 5"
+        href: weeks/w5.qmd
+        contents:
+          - labs/pipe-passwords.qmd
+          - labs/pipe-dup.qmd
+          - labs/fifo.qmd
 
   navbar:
     pinned: true

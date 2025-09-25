@@ -33,3 +33,7 @@
 ./assets/webex.css
 ./theme.scss
 ./footer-cat.scss
+./weeks/w5.qmd
+./labs/pipe-passwords.qmd
+./labs/pipe-dup.qmd
+./labs/fifo.qmd
