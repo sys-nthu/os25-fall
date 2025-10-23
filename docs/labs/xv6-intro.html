@@ -27,7 +27,7 @@
 <span id=cb5-2><a href=#cb5-2 aria-hidden=true tabindex=-1></a>uint64</span>
 <span id=cb5-3><a href=#cb5-3 aria-hidden=true tabindex=-1></a>sys_mycall<span class=op>(</span><span class=dt>void</span><span class=op>)</span></span>
 <span id=cb5-4><a href=#cb5-4 aria-hidden=true tabindex=-1></a><span class=op>{</span></span>
-<span id=cb5-5><a href=#cb5-5 aria-hidden=true tabindex=-1></a>  cprintf<span class=op>(</span><span class=st>"Hello from the kernel!</span><span class=sc>\n</span><span class=st>"</span><span class=op>);</span></span>
+<span id=cb5-5><a href=#cb5-5 aria-hidden=true tabindex=-1></a>  printf<span class=op>(</span><span class=st>"Hello from the kernel!</span><span class=sc>\n</span><span class=st>"</span><span class=op>);</span></span>
 <span id=cb5-6><a href=#cb5-6 aria-hidden=true tabindex=-1></a>  <span class=cf>return</span> <span class=dv>0</span><span class=op>;</span> </span>
 <span id=cb5-7><a href=#cb5-7 aria-hidden=true tabindex=-1></a><span class=op>}</span></span></code><button title="Copy to Clipboard" class=code-copy-button><i class=bi></i></button></pre></div></section><section id=add-the-user-space-stub-in-userusys.pl class=level4><h4 class=anchored data-anchor-id=add-the-user-space-stub-in-userusys.pl>4. Add the user-space stub in <code>user/usys.pl</code>:</h4><div class=sourceCode id=cb6><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id=cb6-1><a href=#cb6-1 aria-hidden=true tabindex=-1></a><span class=op>...</span></span>
 <span id=cb6-2><a href=#cb6-2 aria-hidden=true tabindex=-1></a>entry<span class=op>(</span><span class=st>"uptime"</span><span class=op>);</span></span>
