@@ -1,3 +1,4 @@
+./_quarto.yml
 ./os.bib
 ./theme.css
 ./weeks/w2.qmd

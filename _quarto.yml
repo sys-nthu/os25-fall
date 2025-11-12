@@ -76,8 +76,10 @@ website:
         href: weeks/w11.qmd
         contents:
           - labs/xv6-forkbomb.qmd
-          - labs/xv6-gdb.qmd
-          - labs/xv6-development-env.qmd
+      - section: "Worksheet 12"
+        href: weeks/w12.qmd
+        contents:
+          - labs/event-driven-io.qmd
 
   navbar:
     pinned: true
