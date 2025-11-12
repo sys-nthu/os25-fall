@@ -51,6 +51,33 @@ website:
           - labs/pipe-passwords.qmd
           - labs/pipe-dup.qmd
           - labs/fifo.qmd
+      - section: "Worksheet 6"
+        href: weeks/w6.qmd
+        contents:
+          - handouts/scheduler.qmd
+          - labs/process-state.qmd
+          - labs/pipe-pingpong.qmd
+      - section: "Worksheet 8"
+        href: weeks/w8.qmd
+        contents:
+          - handouts/buffercache.qmd
+          - labs/cat.qmd
+      - section: "Worksheet 9"
+        href: weeks/w9.qmd
+        contents:
+          - labs/xv6-intro.qmd
+          - labs/xv6-gdb.qmd
+          - labs/xv6-syscall.qmd
+      - section: "Worksheet 10"
+        href: weeks/w10.qmd
+        contents:
+          - handouts/vm-page-size.qmd
+      - section: "Worksheet 11"
+        href: weeks/w11.qmd
+        contents:
+          - labs/xv6-forkbomb.qmd
+          - labs/xv6-gdb.qmd
+          - labs/xv6-development-env.qmd
 
   navbar:
     pinned: true
@@ -60,23 +87,63 @@ website:
 
       - text: Handouts
         menu:
-          - text: "Enviroment setup"
-            file: handouts/env_setup.qmd   
+          - text: "Environment Setup"
+            file: handouts/env_setup.qmd
+          - text: "Unix"
+            file: handouts/unix.qmd
+          - text: "Privilege"
+            file: handouts/privilege.qmd
+          - text: "Scheduler"
+            file: handouts/scheduler.qmd
+          - text: "Buffer Cache"
+            file: handouts/buffercache.qmd
+          - text: "Virtual Memory: Page Size"
+            file: handouts/vm-page-size.qmd
+
+      - text: Labs
+        menu:
+          - text: "Mini Cloud"
+            file: labs/mini-cloud.qmd
+          - text: "Linking"
+            file: labs/linking.qmd
+          - text: "Process Creation"
+            file: labs/process-creation.qmd
+          - text: "Process State"
+            file: labs/process-state.qmd
+          - text: "Process Address Space"
+            file: labs/process-address-space.qmd
+          - "---"
+          - text: "Path Traversal"
+            file: labs/path-traversal.qmd
+          - text: "Pipe Passwords"
+            file: labs/pipe-passwords.qmd
+          - text: "Pipe and dup()"
+            file: labs/pipe-dup.qmd
+          - text: "Pipe Ping-Pong"
+            file: labs/pipe-pingpong.qmd
+          - text: "FIFO (named pipe)"
+            file: labs/fifo.qmd
+          - "---"
+          - text: "Cat"
+            file: labs/cat.qmd
+          - "---"
+          - text: "xv6 System Call Tracing"
+            file: labs/xv6-syscall.qmd
 
       - text: Admin
         menu:
           - text: Policies
-            file: admin/policies.qmd   # placeholder
+            file: admin/policies.qmd
           - text: Exploratory Projects
-            file: admin/explore.qmd   # placeholder
+            file: admin/explore.qmd
           - text: SD1↓ (燒蛋一下)
-            file: admin/waitbutwhy.qmd   # placeholder
+            file: admin/waitbutwhy.qmd
 
     right:
       # - icon: github
       #   href: https://github.com/AtlasOfLivingAustralia/cleaning_data
       - icon: globe
-        href: https://dcs.site.nthu.edu.tw/
+        href: https://elearn.nthu.edu.tw/course/view.php?id=38873
 
 
   # --- PAGE FOOTER ---
